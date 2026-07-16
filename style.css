@@ -216,13 +216,18 @@ body.center-layout {
 }
 
 .back-link {
+    display: inline-block;
     color: var(--neon-green);
     text-decoration: none;
-    font-size: 13px;
-    font-weight: bold;
-    position: absolute;
-    left: 20px;
-    top: 25px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #ffffff;
 }
 
 .game-id {
