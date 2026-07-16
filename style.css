@@ -1,15 +1,15 @@
-/* Core Color Palette & Variables */
+/* Portugal National-Inspired Football Palette */
 :root {
-    --bg-darker: #060913;
-    --bg-card: #0d1326;
-    --panel-bg: #121420;
-    --neon-cyan: #00f0ff;
-    --neon-pink: #ff007f;
-    --neon-green: #39ff14;
+    --bg-darker: #050b07; /* Ultra dark green-black pitch atmosphere */
+    --bg-card: #0e1a11;   /* Deep locker-room green */
+    --panel-bg: #142619;  /* Stadium dark panel green */
+    --portugal-red: #da291c;   /* Flag Red Accent */
+    --portugal-green: #046a38; /* Flag Green Brand Color */
+    --neon-green: #39ff14;     /* Electric Match Color */
     --text-main: #ffffff;
-    --text-dim: #8b9bb4;
-    --text-muted: #8fa0ba;
-    --border-glow: rgba(0, 240, 255, 0.2);
+    --text-dim: #a3b8a8;
+    --text-muted: #7d9684;
+    --border-glow: rgba(218, 41, 28, 0.2);
 }
 
 /* Global Reset Rules */
@@ -40,8 +40,8 @@ body.center-layout {
     justify-content: space-between;
     align-items: center;
     padding: 20px 8%;
-    background-color: rgba(6, 9, 19, 0.95);
-    border-bottom: 2px solid rgba(0, 240, 255, 0.1);
+    background-color: rgba(5, 11, 7, 0.95);
+    border-bottom: 2px solid rgba(4, 106, 56, 0.2);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -55,7 +55,7 @@ body.center-layout {
 }
 
 .logo span {
-    color: var(--neon-cyan);
+    color: var(--portugal-red);
 }
 
 .nav-links a {
@@ -68,15 +68,15 @@ body.center-layout {
 }
 
 .nav-links a:hover {
-    color: var(--neon-cyan);
+    color: var(--neon-green);
 }
 
 .nav-links .btn-nav {
-    background: linear-gradient(135deg, var(--neon-pink), #b30059);
+    background: linear-gradient(135deg, var(--portugal-red), #9e1b12);
     color: white;
     padding: 8px 20px;
     border-radius: 4px;
-    box-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
+    box-shadow: 0 0 15px rgba(218, 41, 28, 0.4);
 }
 
 /* Hero Section Layout */
@@ -85,8 +85,8 @@ body.center-layout {
     display: flex;
     align-items: center;
     padding: 0 8%;
-    background: radial-gradient(circle at 80% 20%, rgba(0, 240, 255, 0.1) 0%, transparent 50%),
-                linear-gradient(rgba(6, 9, 19, 0.6), var(--bg-darker));
+    background: radial-gradient(circle at 80% 20%, rgba(4, 106, 56, 0.2) 0%, transparent 50%),
+                linear-gradient(rgba(5, 11, 7, 0.6), var(--bg-darker));
 }
 
 .hero-content h1 {
@@ -100,7 +100,7 @@ body.center-layout {
 }
 
 .badge {
-    color: var(--neon-cyan);
+    color: var(--neon-green);
     letter-spacing: 3px;
     font-weight: 700;
     text-transform: uppercase;
@@ -108,14 +108,14 @@ body.center-layout {
 
 .hero-actions .btn-primary {
     display: inline-block;
-    background-color: var(--neon-cyan);
-    color: var(--bg-darker);
+    background-color: var(--portugal-red);
+    color: white;
     text-decoration: none;
     font-weight: 700;
     padding: 12px 30px;
     border-radius: 4px;
     margin-right: 20px;
-    box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+    box-shadow: 0 0 20px rgba(218, 41, 28, 0.3);
 }
 
 .hero-actions .btn-secondary {
@@ -142,7 +142,7 @@ body.center-layout {
 .accent-line {
     width: 60px;
     height: 4px;
-    background-color: var(--neon-pink);
+    background-color: var(--portugal-red);
     margin-bottom: 40px;
 }
 
@@ -150,7 +150,7 @@ body.center-layout {
     background-color: var(--bg-card);
     padding: 25px;
     border-radius: 8px;
-    border: 1px solid rgba(0, 240, 255, 0.05);
+    border: 1px solid rgba(4, 106, 56, 0.1);
 }
 
 .leaderboard-table {
@@ -161,7 +161,7 @@ body.center-layout {
 }
 
 .leaderboard-table th {
-    color: var(--neon-cyan);
+    color: var(--neon-green);
     padding: 15px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.05);
 }
@@ -172,7 +172,7 @@ body.center-layout {
 }
 
 .top-squad {
-    background-color: rgba(0, 240, 255, 0.03);
+    background-color: rgba(4, 106, 56, 0.05);
 }
 
 .status {
@@ -182,7 +182,7 @@ body.center-layout {
     font-weight: 700;
 }
 
-.status.qualified { background-color: rgba(0, 255, 127, 0.15); color: #00ff7f; }
+.status.qualified { background-color: rgba(57, 255, 20, 0.15); color: var(--neon-green); }
 .status.active { background-color: rgba(255, 165, 0, 0.15); color: #ffa500; }
 
 /* REWARDS HUB DASHBOARD UI ELEMENTS */
@@ -195,21 +195,32 @@ body.center-layout {
 
 .header-panel {
     background-color: var(--panel-bg);
-    border: 1px solid var(--border-glow);
+    border: 1px solid rgba(4, 106, 56, 0.3);
     border-radius: 12px;
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
+    position: relative;
 }
 
 .header-panel h1 {
     font-family: 'Orbitron', sans-serif;
     font-size: 24px;
-    color: var(--neon-cyan);
+    color: var(--portugal-red);
     margin: 0 0 5px 0;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+.back-link {
+    color: var(--neon-green);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    position: absolute;
+    left: 20px;
+    top: 25px;
 }
 
 .game-id {
@@ -226,7 +237,7 @@ body.center-layout {
 }
 
 .wallet-card {
-    background: linear-gradient(145deg, #16192b, #121420);
+    background: linear-gradient(145deg, #0e1a11, #142619);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 10px;
     padding: 15px;
@@ -247,8 +258,8 @@ body.center-layout {
     font-weight: bold;
 }
 
-.value-coin { color: var(--neon-cyan); }
-.value-gold { color: var(--neon-green); }
+.value-coin { color: var(--neon-green); }
+.value-gold { color: var(--portugal-red); }
 
 .action-panel {
     text-align: center;
@@ -281,13 +292,13 @@ body.center-layout {
 }
 
 .btn-claim {
-    background-color: var(--neon-cyan);
-    color: #000000;
-    box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+    background-color: var(--portugal-red);
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(218, 41, 28, 0.4);
 }
 
 .btn-claim:hover {
-    box-shadow: 0 0 25px rgba(0, 240, 255, 0.8);
+    box-shadow: 0 0 25px rgba(218, 41, 28, 0.8);
     transform: translateY(-2px);
 }
 
@@ -307,7 +318,7 @@ body.center-layout {
 .rules-title {
     font-family: 'Orbitron', sans-serif;
     font-size: 14px;
-    color: var(--neon-cyan);
+    color: var(--neon-green);
     text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 15px;
