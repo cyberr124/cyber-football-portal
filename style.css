@@ -79,15 +79,17 @@ body.center-layout {
     box-shadow: 0 0 15px rgba(218, 41, 28, 0.4);
 }
 
-/* Hero Section Layout */
+/* Hero Section Layout with Immersive Background */
 .hero-section {
     height: 80vh;
     display: flex;
     align-items: center;
     padding: 0 8%;
-    background: radial-gradient(circle at 80% 20%, rgba(4, 106, 56, 0.2) 0%, transparent 50%),
-                linear-gradient(rgba(5, 11, 7, 0.6), var(--bg-darker));
+    background: linear-gradient(rgba(5, 11, 7, 0.45), #050b07), 
+                url('https://unsplash.com') no-repeat center center;
+    background-size: cover;
 }
+
 
 .hero-content h1 {
     font-family: 'Orbitron', sans-serif;
