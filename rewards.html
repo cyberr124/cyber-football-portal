@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League Central - Daily Rewards Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body class="center-layout">
+
+    <div class="dashboard-container">
+        
+        <!-- Header Panel -->
+        <div class="header-panel">
+            <a href="index.html" class="back-link">← PORTAL</a>
+            <h1>LEAGUE CENTRAL</h1>
+            <div class="game-id">DEVELOPER PREVIEW PROFILE</div>
+        </div>
+
+        <!-- Wallet Interface -->
+        <div class="wallet-grid">
+            <div class="wallet-card">
+                <div class="wallet-label">Game Coins</div>
+                <div class="wallet-value value-coin" id="coin-balance">500</div>
+            </div>
+            <div class="wallet-card">
+                <div class="wallet-label">Gold Points</div>
+                <div class="wallet-value value-gold" id="gold-balance">150</div>
+            </div>
+        </div>
+
+        <!-- Action Panel -->
+        <div class="action-panel">
+            <div class="captcha-box">
+                🛡️ Anti-Bot Verification Active
+            </div>
+            
+            <button class="btn btn-claim" onclick="triggerAdAndClaim()">Claim Daily Coins</button>
+            <button class="btn btn-withdraw" onclick="alert('Minimum withdrawal requirement is 1,000 Gold Points (₦1,000)')">Withdraw Rewards</button>
+        </div>
+
+        <!-- Official Terms Panel -->
+        <div class="rules-panel">
+            <div class="rules-title">Tournament Rules Policy</div>
+            <ul class="rules-list">
+                <li><strong>1 Gold Point = ₦1.00 Naira.</strong> Earned strictly via tournament final wins.</li>
+                <li><strong>Minimum Withdrawal:</strong> 1,000 Gold Points (₦1,000) sent to OPay/PalmPay.</li>
+                <li><strong>Daily Coin Claims:</strong> Requires secure ad-sponsor authorization to add match tokens.</li>
+                <li><strong>Dynamic Prize Pool:</strong> Match rewards scale dynamically with sponsor traffic thresholds.</li>
+                <li><strong>Anti-Fraud Audit:</strong> Rankings undergo a 48-hour check before final local bank transfers.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+        function triggerAdAndClaim() {
+            if (typeof AdsterraPopunderTrigger === "function") {
+                AdsterraPopunderTrigger();
+            } else {
+                console.log("Adsterra script placeholder active.");
+            }
+
+            let coinElement = document.getElementById('coin-balance');
+            let currentCoins = parseInt(coinElement.innerText);
+            coinElement.innerText = currentCoins + 500;
+            alert("500 Game Coins added to your account! Open your game app to play your league matches.");
+        }
+    </script>
+</body>
+</html>
